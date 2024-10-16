@@ -1,0 +1,476 @@
+/* Paleta de colores */
+:root {
+    --color-primario: #4a90e2;  /* Azul suave */
+    --color-secundario: #50e3c2; /* Verde agua */
+    --color-fondo: #6dc0f4;     /* Fondo muy claro */
+    --color-texto: #333;        /* Texto principal */
+    --color-texto-secundario: #777;  /* Texto secundario */
+    --color-acento: #f5a623;    /* Naranja suave */
+    --color-header-footer: #34495e; /* Azul grisáceo */
+    --color-hover: #3b7fd9;    /* Azul más oscuro para hover */
+    --color-form-bg: #fff;     /* Fondo del formulario */
+    --color-form-borde: #e1e8ed; /* Borde gris claro */
+    --color-boton: #0f100f;    /* Verde suave */
+    --color-boton-hover: #27ae60; /* Verde más oscuro para hover */
+}
+
+* {
+    color: rgb(3, 6, 5);
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Bree Serif", serif;
+}
+
+h1 {
+    font-size: 60px;
+    color: #e1e8ed;
+
+}
+
+@media (max-width: 710px){
+    h1 {
+        font-size: 30px;
+    }
+}
+
+h2 {
+    font-size: 50px;
+    color: #03162e;
+}
+
+p {
+    color: #fff;
+    margin-left: 4%;
+    margin-right: 4%;
+}
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+header {
+    background-color: var(--color-header-footer);
+    color: #fff;
+    height: 58px;
+}
+
+.menu {
+    max-width: 1200px;
+    margin: auto;
+    max-height: 58px;
+    padding: 16px 0;   
+}
+
+nav{
+    height: 26px;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+}
+nav ul li a:hover {
+    background-color: var(--color-hover);
+}
+
+.barras{
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+}
+.fa-bars{
+    color: #fff;
+}
+#check{
+    display: none;
+}
+
+.hero {
+    background-image: url('imagenes/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+    text-align: center;
+    color: #fff;
+    background-color: rgba(52, 73, 94, 0.6);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+
+
+/*Logo Redondo*/
+.hero-content img{
+    border-radius: 100%;
+}
+
+.destinations {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column; 
+    margin-top: 2rem;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+
+
+.destination {
+    flex-basis: calc(33.33% - 20px);
+    margin-bottom: 2rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s;
+}
+
+.destination:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    background-color: var(--color-hover)
+    
+}
+
+.destination img {
+    object-fit: cover;
+    width: 100%;
+    height: 100px;
+    border-radius: 10px 10px 0 0;
+}
+
+.description{
+    padding: 0 7px;
+    margin-bottom: 4%;
+}
+
+.description h3 {
+    color: #04244d;
+    margin: 0 0 0.5rem 0;
+    text-align: center;
+    font-size: 40px;
+}
+
+.description p {
+    color: #fff;
+}
+
+footer {
+    background-color: var(--color-header-footer);
+    color: #fff;
+    text-align: justify;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+/* Estilos para la sección de contacto */
+#contacto {
+    background: linear-gradient(0deg, rgba(0,0,0,0) 75%, rgba(248, 249, 250,1) 100%);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 2%;
+}
+
+@media (max-width: 710px){
+    h2 {
+        font-size: 30px;
+    }
+
+}
+
+.nosotros {
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+#contacto h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+/* Estilos para el contenedor del formulario */
+.contact-form-container {
+    max-width: 90%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
+}
+
+/* Efecto hover en el contenedor del formulario */
+.contact-form-container:hover {
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilos para las etiquetas y campos del formulario */
+.contact-form-container form div {
+    margin-bottom: 20px;
+}
+
+.contact-form-container label {
+    display: block;
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 8px;
+    text-align: left;
+    font-weight: 500;
+}
+
+.contact-form-container input, 
+.contact-form-container textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    background-color: #f3f3f3;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Efecto cuando el campo está enfocado */
+.contact-form-container input:focus, 
+.contact-form-container textarea:focus {
+    border-color: #007BFF;
+    background-color: #fff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.contact-form-container textarea {
+    resize: none;
+    height: 150px;
+}
+
+/* Botones del formulario */
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.contact-form-container button {
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+/* Botón de limpiar */
+.contact-form-container button[type="reset"] {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+/* Botón de enviar */
+.contact-form-container button[type="submit"] {
+    background-color: #2ecc71;
+    color: #fff;
+}
+
+/* Hover en los botones */
+.contact-form-container button:hover {
+    opacity: 0.85;
+}
+
+/* Estilos generales para la sección de Hoteles */
+.Hoteles {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f8f9fa;
+    padding: 2% 4% ;
+    align-items: center;
+}
+
+article.hoteles {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-right: 10px;
+    padding: 20px;
+    max-width: 80%;
+    flex: 1;
+    margin-top: 4%;
+}
+
+article.hoteles h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+article.hoteles h4 {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+article.hoteles p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+article.hoteles ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+article.hoteles ul li {
+    background: url('imagenes/icono-check.png') no-repeat left center;
+    background-size: 20px;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+article.hoteles img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 1.1rem;
+    margin-right: 10px;
+}
+
+select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    width: 100px;
+}
+
+button.btn-agregar-carrito {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button.btn-agregar-carrito:hover {
+    background-color: #218838;
+}
+
+footer{
+    margin: 0;
+    width: 100%;
+    padding: 20px 30px;
+    font-size: 17px;    
+}
+.social-links{
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    width: 135px;
+}
+.fa-brands{
+    box-shadow: 1px 2px 5px #000;
+    text-align: center;
+    color: #000;
+    height: 31px;
+    width: 31px;
+    margin: 7px;
+    padding: 7px;
+    border-radius: 50%;
+}
+.fa-instagram:hover{
+    background: #833ab4;
+    background: linear-gradient(to bottom,#833ab4,#fd1d1d,#fcb045);
+    color: #fff;
+}
+.fa-twitter:hover{
+    background: #08a0e9;
+    color: #fff;
+}
+.fa-facebook-f:hover{
+    background: #1877F2;
+    color: #fff;
+}
+
+/* Estilos para una mejor disposición en pantallas pequeñas */
+@media (max-width: 768px) {
+    article.hoteles {
+        max-width: 100%;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 710px){
+    .barras{
+        display: block;
+        top: 0%;
+        margin: 5px 13px;
+    }
+    .parts{
+        flex-direction: column;
+        position:absolute;
+        width: 100%;
+        background-color: var(--color-header-footer);
+        top: 58px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 10px;
+    }
+    #check:checked ~.parts{
+        left: 0;
+    }
+
+}
